@@ -2,6 +2,8 @@
 
 Currently a work in progress
 
+run `npm update` then `npm start` 
+
 ## Plans
 
 * Sations list to actually filter by the search.
