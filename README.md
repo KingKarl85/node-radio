@@ -2,7 +2,7 @@
 
 Currently a work in progress
 
-run `npm update` then `npm start` 
+run `npm update` then `npm start` (you may need to run `npm install lame` also)
 
 ## Plans
 
