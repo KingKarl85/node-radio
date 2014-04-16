@@ -88,13 +88,13 @@ var Row = React.createClass({
 	render:function(){
 
 		return (<tr onClick={this.clickHandler} onTouchEnd={this.clickHandler} onMouseEnter={this.hoverStart} onMouseLeave={this.hoverEnd}>
-			<td>
+			<td className="col-md-1 col-xs-2">
 			{this.state.hover?
 				<a href="#">{this.isPlaying() ? <GlyphIconStop /> : <GlyphIconPlay />}</a>:
 				this.isPlaying()?<GlyphIconVolumeUp />:''
 			}
 			</td>
-			<td colSpan="2">{this.props.station.name}</td>
+			<td colSpan="2" className="col-md-11 col-xs-10">{this.props.station.name}</td>
 		</tr>);
 	}
 });
@@ -126,9 +126,9 @@ var App = React.createClass({
 						<table className="table table-striped table-hover">
 							<thead>
 								<tr>
-									<th className="col-md-1">&nbsp;</th>
-									<th className="col-md-3">Station</th>
-									<th className="col-md-8">
+									<th className="col-md-1 col-xs-1">&nbsp;</th>
+									<th className="col-md-3 col-xs-3">Station</th>
+									<th className="col-md-8 col-xs-8">
 									</th>
 								</tr>
 							</thead>
