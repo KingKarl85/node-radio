@@ -98,6 +98,9 @@ var App = React.createClass({
 			}.bind(this));
 		};
 
+									// <form action="" method="post" role="form">
+									// 	<input type="search" className="form-control input-sm" placeholder="Search Stations ..." autoFocus="true" />
+									// </form>
 		return (
 			<div className="container">
 				<div className="row">
@@ -108,12 +111,9 @@ var App = React.createClass({
 						<table className="table table-striped table-hover">
 							<thead>
 								<tr>
-									<th class="col-md-1">&nbsp;</th>
-									<th class="col-md-3">Station</th>
-									<th class="col-md-3">
-									<form action="" method="post" role="form">
-										<input type="search" className="form-control input-sm" placeholder="Search Stations ..." autoFocus="true" />
-									</form>
+									<th className="col-md-1">&nbsp;</th>
+									<th className="col-md-3">Station</th>
+									<th className="col-md-8">
 									</th>
 								</tr>
 							</thead>
