@@ -87,7 +87,7 @@ var Row = React.createClass({
 	},
 	render:function(){
 
-		return (<tr onClick={this.clickHandler} onMouseEnter={this.hoverStart} onMouseLeave={this.hoverEnd}>
+		return (<tr onClick={this.clickHandler} onTouchEnd={this.clickHandler} onMouseEnter={this.hoverStart} onMouseLeave={this.hoverEnd}>
 			<td>
 			{this.state.hover?
 				<a href="#">{this.isPlaying() ? <GlyphIconStop /> : <GlyphIconPlay />}</a>:
