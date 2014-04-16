@@ -63,6 +63,11 @@ Player.prototype = _.extend({
 
 
 var Row = React.createClass({
+	getInitialState:function(){
+		return {
+			hover:false
+		}
+	},
 	isPlaying:function(){
 		return this.props.player.playing == this.props.station.id;
 	},
@@ -74,10 +79,20 @@ var Row = React.createClass({
 			this.props.player.play(this.props.station.id);
 		}
 	},
+	hoverStart:function(){
+		this.setState({hover:true});
+	},
+	hoverEnd:function(){
+		this.setState({hover:false});
+	},
 	render:function(){
-		return (<tr onClick={this.clickHandler}>
+
+		return (<tr onClick={this.clickHandler} onMouseEnter={this.hoverStart} onMouseLeave={this.hoverEnd}>
 			<td>
-				<a href="#">{this.isPlaying() ? <GlyphIconStop /> : <GlyphIconPlay />}</a>
+			{this.state.hover?
+				<a href="#">{this.isPlaying() ? <GlyphIconStop /> : <GlyphIconPlay />}</a>:
+				this.isPlaying()?<GlyphIconVolumeUp />:''
+			}
 			</td>
 			<td colSpan="2">{this.props.station.name}</td>
 		</tr>);

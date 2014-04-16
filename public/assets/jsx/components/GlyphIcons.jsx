@@ -2,7 +2,7 @@
 
 var GlyphIcon = React.createClass({
 	render:function(){
-		var className = "glyphicon glyphicon-" + this.props.type;
+		var className = "glyphicon glyphicon-" + this.props.type + " " + this.props.className;
 
 		return (
 			<Icon className={className} textRight={this.props.textRight} textLeft={this.props.textLeft} />
@@ -20,6 +20,7 @@ function extendIcon(typeClass){
 					textLeft={this.props.textLeft}
 					textRight={this.props.textRight}
 					spinClass={this.props.spinClass}
+					className={this.props.className}
 				/>
 			);
 		}
