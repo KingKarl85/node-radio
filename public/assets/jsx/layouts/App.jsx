@@ -120,7 +120,7 @@ var App = React.createClass({
 			<div className="container">
 				<div className="row">
 
-					<div className="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+					<div className="col-xs-12 col-md-6 col-md-offset-3">
 						<h1>sPlayer</h1>
 						<p>{title}</p>
 						<table className="table table-striped table-hover">
